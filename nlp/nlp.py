@@ -6,14 +6,14 @@ simbol_list = ['.', '"', "'", '(', ')', '[', ']', '=', '-', '@', '!', '?']
 josa_list = []
 eomi_list = []
 
-josa_file = open('C:\\DEV\\python\\nlp\\JosaEomi\\JOSA.out', 'r')
+josa_file = open('JosaEomi\\JOSA.out', 'r')
 lines = josa_file.readlines()
 for line in lines:
 	josa_list.append(line.strip())
 #print("JOSA list: ", josa_list)
 josa_file.close()
 
-eomi_file = open('C:\\DEV\\python\\nlp\\JosaEomi\\EOMI.out', 'r')
+eomi_file = open('JosaEomi\\EOMI.out', 'r')
 lines = eomi_file.readlines()
 for line in lines:
 	eomi_list.append(line.strip())
@@ -46,7 +46,7 @@ def remove_josaeomi(word):
 	
 	return removed_word.rstrip(max_word)
 
-input_file = open('C:\\DEV\\python\\nlp\\input\\input.out', 'r')
+input_file = open('input\\input.out', 'r')
 lines = input_file.readlines()
 for line in lines:
 	for simbol in simbol_list:
