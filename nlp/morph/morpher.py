@@ -7,22 +7,14 @@ simbol_list = ['.', '"', "'", '(', ')', '[', ']', '=', '-', '@', '!', '?']
 josa_list = []
 eomi_list = []
 
-<<<<<<< HEAD:nlp/morph/morpher.py
-josa_file = open('C:\\DEV\\python\\study\\nlp\\morph\\JosaEomi\\JOSA.out', 'r')
-=======
-josa_file = open('JosaEomi'+os.sep+'JOSA.out', 'r')
->>>>>>> e2a2a037da3d552f2f6364e95561634f8712215a:nlp/nlp.py
+josa_file = open(os.path.dirname(__file__)+os.sep+'JosaEomi'+os.sep+'JOSA.out', 'r')
 lines = josa_file.readlines()
 for line in lines:
 	josa_list.append(line.strip())
 #print("JOSA list: ", josa_list)
 josa_file.close()
 
-<<<<<<< HEAD:nlp/morph/morpher.py
-eomi_file = open('C:\\DEV\\python\\study\\nlp\\morph\\JosaEomi\\EOMI.out', 'r')
-=======
-eomi_file = open('JosaEomi'+os.sep+'EOMI.out', 'r')
->>>>>>> e2a2a037da3d552f2f6364e95561634f8712215a:nlp/nlp.py
+eomi_file = open(os.path.dirname(__file__)+os.sep+'JosaEomi'+os.sep+'EOMI.out', 'r')
 lines = eomi_file.readlines()
 for line in lines:
 	eomi_list.append(line.strip())
@@ -60,34 +52,5 @@ def remove_josaeomi(word):
 				max_word = eomi
 	
 	return removed_word.rstrip(max_word)
-<<<<<<< HEAD:nlp/morph/morpher.py
-=======
-
-input_file = open('input'+os.sep+'input.out', 'r')
-lines = input_file.readlines()
-for line in lines:
-	for simbol in simbol_list:
-		line = line.replace(simbol, ' ')
-	line = line.strip()
-	if len(line) == 0:
-		continue	
-	print("line: ", line)
-	
-	word_list = get_words_in_line(line)
-	if len(word_list) != 0:
-		print("words: ", word_list)
-	
-	removed_word_list = []
-	for word in word_list:
-		removed_word = remove_josaeomi(word)
-		if len(removed_word) == 0:
-			continue
-		removed_word_list.append(removed_word)
-	print("refined_words: ", removed_word_list)
-	
-	print('\n')
-	
-input_file.close();
->>>>>>> e2a2a037da3d552f2f6364e95561634f8712215a:nlp/nlp.py
 	
 
