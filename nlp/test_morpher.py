@@ -27,7 +27,4 @@ def test_morpher(filename):
 	input_file.close();
 
 if __name__ == '__main__':
-	test_morpher(os.path.dirname(__file__)+os.sep+'input'+os.sep+'input2.out')
-	
-	
-
+	test_morpher(os.path.dirname(__file__)+os.sep+'input'+os.sep+'input.out')

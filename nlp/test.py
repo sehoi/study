@@ -1,4 +1,5 @@
 ﻿# -*- coding: utf-8 -*-
+import os
 from morph import morpher
 
 def test_morpher(filename):
@@ -26,7 +27,4 @@ def test_morpher(filename):
 	input_file.close();
 
 if __name__ == '__main__':
-	test_morpher('C:\\DEV\\python\\study\\nlp\\input\\input.out')
-	
-	
-
+	test_morpher(os.path.dirname(__file__)+os.sep+'input'+os.sep+'input2.out')
