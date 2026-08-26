@@ -12,6 +12,8 @@ Streamlit UI  ──▶  LangGraph 그래프  ──▶  Claude (langchain-anthr
                         └── FAQ 검색 (BM25 리트리버)
 ```
 
+> 모듈 구조와 한 턴의 실행 흐름을 단계별로 추적한 문서: [`docs/ai-agent-architecture.md`](../docs/ai-agent-architecture.md)
+
 ## 기술 스택
 
 | 영역 | 선택 | 이유 |
